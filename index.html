@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ken Añabieza | GoHighLevel Specialist</title>
+    <meta name="description" content="GoHighLevel (GHL) specialist building funnels, pipelines, workflows, SMS/email campaigns, snapshots, and full CRM automation for agencies and businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kenanabieza.github.io/ghl-portfolio/">
+    <meta property="og:title" content="Ken Añabieza | GoHighLevel Specialist">
+    <meta property="og:description" content="GHL expert: funnels, workflows, pipelines, SMS/email, snapshots, sub-accounts, reputation management, membership sites.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ken Añabieza | GoHighLevel Specialist">
+    <meta name="twitter:description" content="GoHighLevel specialist — funnels, automations, pipelines, campaigns, and snapshots.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a1a;
+            --bg-darker: #050510;
+            --bg-card: #111127;
+            --bg-card-hover: #1a1a3e;
+            --primary: #8b5cf6;
+            --primary-dark: #7c3aed;
+            --secondary: #3b82f6;
+            --cyan: #06b6d4;
+            --green: #10b981;
+            --orange: #f97316;
+            --pink: #ec4899;
+            --text-white: #ffffff;
+            --text-light: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+            --gradient-1: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            --gradient-2: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+            --gradient-3: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            --gradient-4: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-white);
+            background: var(--bg-dark);
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+            padding: 12px 40px;
+        }
+
+        .nav-logo {
+            font-size: 1.3em;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--gradient-1);
+            color: white !important;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(139, 92, 246, 0.18) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 50px;
+            font-size: 0.85em;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 28px;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5em, 6vw, 4.5em);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05em, 2vw, 1.25em);
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 14px 32px;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-secondary {
+            padding: 14px 32px;
+            background: transparent;
+            color: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(139, 92, 246, 0.08);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 64px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat { text-align: center; }
+
+        .hero-stat-value {
+            font-size: 2em;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-label {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* SECTIONS */
+        .section { padding: 100px 40px; }
+        .section-dark { background: var(--bg-dark); }
+        .section-darker { background: var(--bg-darker); }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 50px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: clamp(2em, 4vw, 2.8em);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1em;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* ABOUT */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.08em;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-content strong { color: var(--primary); }
+
+        /* CAPABILITIES */
+        .cap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .cap-card {
+            padding: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cap-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--cap-color, var(--gradient-1));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cap-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            background: var(--bg-card-hover);
+        }
+
+        .cap-card:hover::before { opacity: 1; }
+
+        .cap-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-bottom: 16px;
+            background: var(--cap-color, var(--gradient-1));
+        }
+
+        .cap-card h3 {
+            font-size: 1.15em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .cap-card p {
+            font-size: 0.92em;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* RESULTS */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .result-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .result-value {
+            font-size: 2.2em;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .result-label {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* SERVICES */
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .svc-card {
+            padding: 32px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .svc-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            background: var(--bg-card-hover);
+        }
+
+        .svc-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .svc-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4em;
+            flex-shrink: 0;
+        }
+
+        .svc-card h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: white;
+        }
+
+        .svc-card > p {
+            font-size: 0.95em;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .svc-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .svc-features li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.9em;
+            border-top: 1px solid var(--border);
+        }
+
+        .svc-features li:first-child { border-top: 0; }
+
+        .svc-features li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        /* PROJECTS */
+        .proj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .proj-card {
+            padding: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .proj-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .proj-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .proj-tag {
+            padding: 4px 12px;
+            background: rgba(139, 92, 246, 0.12);
+            color: var(--primary);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 50px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+
+        .proj-card h3 {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .proj-card p {
+            font-size: 0.92em;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .proj-metrics {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .proj-metric {
+            font-size: 0.85em;
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* WORKFLOW */
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .flow-step {
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .flow-num {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            color: white;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1em;
+        }
+
+        .flow-step h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .flow-step p {
+            font-size: 0.88em;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            padding: 100px 40px;
+            background: var(--bg-darker);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .contact-card {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact-card h2 {
+            font-size: clamp(2em, 4vw, 2.6em);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .contact-card > p {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-size: 1.08em;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .contact-method {
+            padding: 20px 28px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.2s;
+            min-width: 220px;
+        }
+
+        .contact-method:hover {
+            border-color: var(--primary);
+            background: rgba(139, 92, 246, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .contact-method .label {
+            font-size: 0.78em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-method .value {
+            font-size: 0.98em;
+            color: white;
+            font-weight: 500;
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-social {
+            padding: 10px 20px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .contact-social:hover {
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--bg-darker);
+            padding: 24px 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85em;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ANIMATIONS */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .navbar { padding: 14px 24px; }
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(10, 10, 26, 0.98);
+                padding: 20px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-toggle { display: flex; }
+            .section { padding: 72px 24px; }
+            .hero { padding: 100px 24px 64px; }
+            .hero-stats { gap: 24px; }
+        }
+
+        @media (max-width: 600px) {
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .contact-methods { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-logo">KR. A&ntilde;abieza</div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="dot"></span> Available for GHL Projects
+        </div>
+        <h1>GoHighLevel<br><span class="gradient-text">Specialist &amp; Agency Partner</span></h1>
+        <p class="hero-subtitle">
+            I build and manage complete GoHighLevel systems &mdash; funnels, pipelines, workflows, SMS/email campaigns,
+            snapshots, memberships, and sub-account setups. Everything your agency or business needs to scale on GHL.
+        </p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Start a Project</a>
+            <a href="#services" class="btn-secondary">View Services</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-value">25+</div>
+                <div class="hero-stat-label">GHL Accounts Built</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">100+</div>
+                <div class="hero-stat-label">Workflows Deployed</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">40%</div>
+                <div class="hero-stat-label">Avg Conversion Lift</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">95%</div>
+                <div class="hero-stat-label">Client Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-dark" id="about">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">About</div>
+            <h2 class="section-title">Your GHL Expert on Demand</h2>
+        </div>
+        <div class="about-content fade-in">
+            <p>
+                I'm <strong>Ken Reymart A&ntilde;abieza</strong> &mdash; a GoHighLevel specialist who helps agencies
+                and businesses get the most out of the platform. From cold sub-account to fully automated client-ready
+                system, I handle the full build.
+            </p>
+            <p>
+                With deep experience across <strong>funnels, workflows, pipelines, SMS/email, memberships, calendars, reputation management,
+                and snapshot creation</strong>, I bridge the gap between strategy and execution. Whether you're an agency
+                needing scalable snapshots or a business launching your first funnel, I deliver clean, tested, documented builds.
+            </p>
+            <p>
+                I also integrate GHL with external tools &mdash; <strong>n8n, Make.com, Zapier, and custom APIs</strong> &mdash;
+                when you need to push GHL beyond its native limits.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section section-darker" id="capabilities">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Capabilities</div>
+            <h2 class="section-title">Full GHL Coverage</h2>
+            <p class="section-subtitle">Every module of the GoHighLevel platform, configured and optimized to work together</p>
+        </div>
+        <div class="cap-grid fade-in">
+            <div class="cap-card" style="--cap-color: var(--gradient-1);">
+                <div class="cap-icon">&#129517;</div>
+                <h3>Funnel Building</h3>
+                <p>Landing pages, sales funnels, opt-ins, and upsell sequences built with GHL's native funnel builder &mdash; mobile-optimized and conversion-tested.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-2);">
+                <div class="cap-icon">&#9889;</div>
+                <h3>Workflow Automation</h3>
+                <p>Complex multi-branch workflows with conditional logic, wait steps, triggers, and webhook integrations to automate your entire customer journey.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-3);">
+                <div class="cap-icon">&#128233;</div>
+                <h3>SMS &amp; Email Campaigns</h3>
+                <p>Drip campaigns, nurture sequences, broadcast blasts, and 2-way conversational messaging configured with proper compliance and deliverability.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-4);">
+                <div class="cap-icon">&#128221;</div>
+                <h3>Pipelines &amp; CRM</h3>
+                <p>Custom sales pipelines, opportunity stages, lead scoring, and deal tracking. Clean data architecture with custom fields and tags.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-1);">
+                <div class="cap-icon">&#128197;</div>
+                <h3>Calendars &amp; Booking</h3>
+                <p>Round-robin team calendars, class calendars, service booking with payment collection, and automated reminders.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-2);">
+                <div class="cap-icon">&#128209;</div>
+                <h3>Snapshots</h3>
+                <p>Reusable snapshots for niche templates &mdash; chiropractors, agencies, real estate, fitness, dental, and more. Clone-and-deploy-ready.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-3);">
+                <div class="cap-icon">&#11088;</div>
+                <h3>Reputation Management</h3>
+                <p>Review request automations, Google/Facebook listing sync, and negative review gating to build 5-star profiles automatically.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-4);">
+                <div class="cap-icon">&#127894;</div>
+                <h3>Membership Sites</h3>
+                <p>Course creation, member portals, drip content, quiz modules, and offer bundles configured in GHL's membership module.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-1);">
+                <div class="cap-icon">&#128101;</div>
+                <h3>Sub-Account Setup</h3>
+                <p>Full agency-ready sub-account provisioning: branding, user roles, permissions, domain connection, A2P registration, and onboarding.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-2);">
+                <div class="cap-icon">&#128279;</div>
+                <h3>API &amp; Integrations</h3>
+                <p>GHL API work, webhook setups, and integration with n8n, Make.com, Zapier, Stripe, QuickBooks, Google Sheets, and more.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-3);">
+                <div class="cap-icon">&#128202;</div>
+                <h3>Reporting &amp; Dashboards</h3>
+                <p>Custom dashboards, attribution reports, conversion tracking, and performance monitoring across all sub-accounts.</p>
+            </div>
+            <div class="cap-card" style="--cap-color: var(--gradient-4);">
+                <div class="cap-icon">&#127760;</div>
+                <h3>SaaS Mode Setup</h3>
+                <p>White-label rebranding, SaaS configurator, Stripe billing, plan tiers, and agency dashboard for resellers launching their own SaaS.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section section-dark" id="results">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Impact</div>
+            <h2 class="section-title">Results That Matter</h2>
+            <p class="section-subtitle">Measurable outcomes delivered across GHL builds</p>
+        </div>
+        <div class="results-grid fade-in">
+            <div class="result-card">
+                <div class="result-value">25+</div>
+                <div class="result-label">GHL Sub-Accounts Built &amp; Optimized</div>
+            </div>
+            <div class="result-card">
+                <div class="result-value">100+</div>
+                <div class="result-label">Automation Workflows Deployed</div>
+            </div>
+            <div class="result-card">
+                <div class="result-value">40%</div>
+                <div class="result-label">Average Conversion Lift</div>
+            </div>
+            <div class="result-card">
+                <div class="result-value">60+</div>
+                <div class="result-label">Hours Saved Per Week Per Client</div>
+            </div>
+            <div class="result-card">
+                <div class="result-value">3x</div>
+                <div class="result-label">Lead Response Speed</div>
+            </div>
+            <div class="result-card">
+                <div class="result-value">95%</div>
+                <div class="result-label">Client Satisfaction Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-darker" id="services">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Services</div>
+            <h2 class="section-title">How I Can Help</h2>
+            <p class="section-subtitle">Choose a focused engagement or a full-build package</p>
+        </div>
+        <div class="svc-grid fade-in">
+            <div class="svc-card">
+                <div class="svc-header">
+                    <div class="svc-icon">&#128736;&#65039;</div>
+                    <h3>Sub-Account Full Build</h3>
+                </div>
+                <p>End-to-end setup of a client-ready GHL sub-account from scratch, tailored to the client's niche.</p>
+                <ul class="svc-features">
+                    <li>Branding, domain, A2P registration</li>
+                    <li>Funnels, calendars, pipelines</li>
+                    <li>Core automations &amp; email/SMS templates</li>
+                    <li>Snapshot creation for reuse</li>
+                    <li>Team handoff &amp; SOP documentation</li>
+                </ul>
+            </div>
+            <div class="svc-card">
+                <div class="svc-header">
+                    <div class="svc-icon">&#9889;</div>
+                    <h3>Workflow Design &amp; Optimization</h3>
+                </div>
+                <p>Build net-new workflows or fix/optimize existing automations that aren't firing correctly.</p>
+                <ul class="svc-features">
+                    <li>Lead nurture sequences</li>
+                    <li>Appointment reminders &amp; no-show recovery</li>
+                    <li>Post-purchase &amp; upsell flows</li>
+                    <li>Reputation request automations</li>
+                    <li>Webhook-based external triggers</li>
+                </ul>
+            </div>
+            <div class="svc-card">
+                <div class="svc-header">
+                    <div class="svc-icon">&#129517;</div>
+                    <h3>Funnel Build &amp; Optimization</h3>
+                </div>
+                <p>High-converting funnels with tested copy structure, mobile optimization, and tracking pixels.</p>
+                <ul class="svc-features">
+                    <li>Lead magnet / opt-in funnels</li>
+                    <li>Webinar &amp; application funnels</li>
+                    <li>Sales funnels with order bumps &amp; upsells</li>
+                    <li>Multi-step survey funnels</li>
+                    <li>Pixel &amp; conversion tracking setup</li>
+                </ul>
+            </div>
+            <div class="svc-card">
+                <div class="svc-header">
+                    <div class="svc-icon">&#128209;</div>
+                    <h3>Niche Snapshot Creation</h3>
+                </div>
+                <p>Custom snapshots for agencies to deploy across client accounts &mdash; tested and documented.</p>
+                <ul class="svc-features">
+                    <li>Industry-specific automation templates</li>
+                    <li>Funnel &amp; pipeline templates</li>
+                    <li>Pre-built email/SMS sequences</li>
+                    <li>Custom fields &amp; tag architecture</li>
+                    <li>Snapshot documentation &amp; walkthrough</li>
+                </ul>
+            </div>
+            <div class="svc-card">
+                <div class="svc-header">
+                    <div class="svc-icon">&#127760;</div>
+                    <h3>SaaS Mode Configuration</h3>
+                </div>
+                <p>Launch your white-label GHL SaaS offer with proper billing, tiers, and onboarding.</p>
+                <ul class="svc-features">
+                    <li>White-label rebranding &amp; custom domain</li>
+                    <li>SaaS configurator &amp; Stripe billing</li>
+                    <li>Plan tier setup &amp; feature gating</li>
+                    <li>Client onboarding automations</li>
+                    <li>Agency dashboard &amp; reporting</li>
+                </ul>
+            </div>
+            <div class="svc-card">
+                <div class="svc-header">
+                    <div class="svc-icon">&#128279;</div>
+                    <h3>GHL Integrations &amp; API</h3>
+                </div>
+                <p>Extend GHL beyond its native features via API, webhooks, and third-party platforms.</p>
+                <ul class="svc-features">
+                    <li>n8n, Make.com, Zapier bridges</li>
+                    <li>Custom API workflows</li>
+                    <li>Stripe, QuickBooks, Sheets sync</li>
+                    <li>AI agent &amp; voice agent integration</li>
+                    <li>Data migration from other CRMs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-dark" id="process">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Process</div>
+            <h2 class="section-title">How We Work Together</h2>
+            <p class="section-subtitle">A clean, structured process that keeps projects on track</p>
+        </div>
+        <div class="flow-grid fade-in">
+            <div class="flow-step">
+                <div class="flow-num">1</div>
+                <h3>Discovery Call</h3>
+                <p>Understand your goals, current GHL state, and key outcomes. Identify scope and deliverables.</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">2</div>
+                <h3>Build Plan</h3>
+                <p>Receive a detailed build plan with timeline, milestones, and what's included.</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">3</div>
+                <h3>Implementation</h3>
+                <p>I build in your sub-account (or mine for snapshot work), with progress updates throughout.</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">4</div>
+                <h3>QA &amp; Testing</h3>
+                <p>Full end-to-end testing of funnels, workflows, triggers, and integrations before handoff.</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">5</div>
+                <h3>Handoff &amp; Training</h3>
+                <p>Walkthrough video, documentation, and SOPs so your team can operate and extend the build.</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">6</div>
+                <h3>Optional Support</h3>
+                <p>Ongoing retainer support for edits, optimization, and new features after launch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section section-darker" id="projects">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Projects</div>
+            <h2 class="section-title">Featured GHL Builds</h2>
+            <p class="section-subtitle">A selection of representative GoHighLevel projects</p>
+        </div>
+        <div class="proj-grid fade-in">
+            <div class="proj-card">
+                <div class="proj-tags">
+                    <span class="proj-tag">Funnel</span>
+                    <span class="proj-tag">Workflow</span>
+                    <span class="proj-tag">SMS</span>
+                </div>
+                <h3>Chiropractic Lead-Gen System</h3>
+                <p>Complete patient acquisition funnel with instant SMS follow-up, appointment booking, and no-show recovery for a multi-location chiropractic clinic.</p>
+                <div class="proj-metrics">
+                    <span class="proj-metric">+52% booking rate</span>
+                    <span class="proj-metric">-38% no-shows</span>
+                </div>
+            </div>
+            <div class="proj-card">
+                <div class="proj-tags">
+                    <span class="proj-tag">Snapshot</span>
+                    <span class="proj-tag">Agency</span>
+                </div>
+                <h3>Real Estate Agency Snapshot</h3>
+                <p>Reusable snapshot covering buyer &amp; seller funnels, drip nurture sequences, listing alert automations, and custom pipelines for a real estate-focused agency.</p>
+                <div class="proj-metrics">
+                    <span class="proj-metric">Deployed to 12 accounts</span>
+                    <span class="proj-metric">80% setup time saved</span>
+                </div>
+            </div>
+            <div class="proj-card">
+                <div class="proj-tags">
+                    <span class="proj-tag">SaaS Mode</span>
+                    <span class="proj-tag">Stripe</span>
+                </div>
+                <h3>White-Label SaaS Launch</h3>
+                <p>Complete SaaS configurator setup with 3-tier pricing, Stripe billing, automated client onboarding, and agency dashboard for a marketing agency pivoting to SaaS.</p>
+                <div class="proj-metrics">
+                    <span class="proj-metric">30 paid clients in 60 days</span>
+                    <span class="proj-metric">$15K MRR added</span>
+                </div>
+            </div>
+            <div class="proj-card">
+                <div class="proj-tags">
+                    <span class="proj-tag">Workflow</span>
+                    <span class="proj-tag">Integration</span>
+                </div>
+                <h3>Fitness Studio Membership Automation</h3>
+                <p>End-to-end member lifecycle: lead capture, trial sign-up, membership conversion, Stripe billing, and retention sequences for a boutique fitness studio.</p>
+                <div class="proj-metrics">
+                    <span class="proj-metric">+34% trial-to-paid</span>
+                    <span class="proj-metric">-20% churn</span>
+                </div>
+            </div>
+            <div class="proj-card">
+                <div class="proj-tags">
+                    <span class="proj-tag">Reputation</span>
+                    <span class="proj-tag">Review Automation</span>
+                </div>
+                <h3>Dental Practice Review System</h3>
+                <p>Automated review request flow with negative-review gating and Google/Facebook sync for a 4-location dental group.</p>
+                <div class="proj-metrics">
+                    <span class="proj-metric">4.3 &rarr; 4.9 star avg</span>
+                    <span class="proj-metric">+280 new reviews in 90d</span>
+                </div>
+            </div>
+            <div class="proj-card">
+                <div class="proj-tags">
+                    <span class="proj-tag">Funnel</span>
+                    <span class="proj-tag">Webinar</span>
+                </div>
+                <h3>Coaching Webinar Funnel</h3>
+                <p>Evergreen webinar registration funnel with reminder sequences, replay access, and application-based booking for a high-ticket coaching program.</p>
+                <div class="proj-metrics">
+                    <span class="proj-metric">45% show-up rate</span>
+                    <span class="proj-metric">18% apply rate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="contact-card fade-in">
+            <h2>Let's Build Your <span style="background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">GHL System</span></h2>
+            <p>Whether you're an agency scaling snapshots or a business launching your first funnel &mdash; I can help.</p>
+            <div class="contact-methods">
+                <a href="mailto:anabieza.acc@gmail.com" class="contact-method">
+                    <div class="label">Email</div>
+                    <div class="value">anabieza.acc@gmail.com</div>
+                </a>
+                <a href="https://wa.me/639289346203" class="contact-method" target="_blank" rel="noopener">
+                    <div class="label">WhatsApp</div>
+                    <div class="value">+63 928 934 6203</div>
+                </a>
+            </div>
+            <div class="contact-socials">
+                <a href="https://www.linkedin.com/in/ken-reymart-anabieza" class="contact-social" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/kenanabieza" class="contact-social" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://kenanabieza.github.io/portfolio/" class="contact-social" target="_blank" rel="noopener">Main Portfolio</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    &copy; 2025 Ken Reymart A&ntilde;abieza. GoHighLevel Specialist.
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
